@@ -4,23 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <title>TodoList</title>
+    <link rel="stylesheet" href="app.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js"
-        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+        </script>
     <script src="https://kit.fontawesome.com/34211a1723.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <main class="main">
         <div class="inputArea">
-            <input class="textArea">
-            <span class="textValue" 　placeholder="ここに追加する内容を書く"></span>
+            <input class="textArea jsTextArea">
+            <span class="textError jsError">文字が入力されていません</span>
         </div>
-        <button classs="addButton">追加ボタン</button>
+        <button class="addButton jsAddButton">追加ボタン</button>
 
         <div class="searchArea">
-            <input class="searchValue" placeholder="ここに追加する内容を書く">
+            <input type="text" class="searchValue" placeholder="ここに追加する内容を書く">
+            <i class="fa fa-search searchBox_icon" aria-hidden="true"></i>
         </div>
+        <ul class="list jsTodoList">
+            <li class="listItem jsTodoList" data-text="ToDoサンプルリスト">
+                <i class="fa fa-square-o jsDone"></i>
+                <span class="jsDoneText">TODOリスト</span>
+                <input type="text" class="textEdit jsEdit">
+                <i class="fa fa-trash jsTrash"></i>
+            </li>
+            <li class="listItem" data-text="ToDoサンプルリスト">
+                <i class="fa fa-square-o jsDone"></i>
+                <span class="jsDoneText">TODOリスト</span>
+                <input type="text" class="textEdit jsEdit">
+                <i class="fa fa-trash jsTrash"></i>
+            </li>
+        </ul>
+
     </main>
+    <script src="app.js"></script>
 </body>
 
 </html>
