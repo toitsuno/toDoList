@@ -13,8 +13,9 @@
 
 <body>
     <main class="main">
+        <h2>TodoList</h2>
         <div class="inputArea">
-            <input class="textArea jsTextArea">
+            <input class="textArea jsTextArea" placeholder="追加リスト内容">
             <span class="textError jsError">文字が入力されていません</span>
         </div>
         <button class="addButton jsAddButton">追加ボタン</button>
@@ -25,7 +26,7 @@
         </div>
         <ul class="list jsTodoList">
             <li class="listItem jsTodoList" data-text="ToDoサンプルリスト">
-                <i class="fa fa-square-o jsDone"></i>
+                <i class="doneIcon fa fa-square-o jsDone"></i>
                 <span class="jsDoneText">TODOリスト</span>
                 <input type="text" class="textEdit jsEdit">
                 <i class="fa fa-trash jsTrash"></i>
@@ -34,7 +35,7 @@
                 <i class="fa fa-square-o jsDone"></i>
                 <span class="jsDoneText">TODOリスト</span>
                 <input type="text" class="textEdit jsEdit">
-                <i class="fa fa-trash jsTrash"></i>
+                <i class="trashIcon fa fa-trash jsTrash"></i>
             </li>
         </ul>
 
