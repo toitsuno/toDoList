@@ -3,43 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ToDoList</title>
+    <title>TODO LIST</title>
     <link rel="stylesheet" href="app.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.js"
-        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
-        </script>
-    <script src="https://kit.fontawesome.com/34211a1723.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/e3ae05b8e6.js"></script>
 </head>
 
 <body>
-    <main class="main">
-        <h2>TodoList</h2>
-        <div class="inputArea">
-            <input class="textArea jsTextArea" placeholder="追加リスト内容">
-            <span class="textError jsError">文字が入力されていません</span>
-        </div>
-        <button class="addButton jsAddButton">追加します</button>
 
-        <div class="searchArea">
-            <input type="text" class="searchValue" placeholder="ここに追加する内容を書く">
-            <i class="fa fa-search searchBox_icon" aria-hidden="true"></i>
+    <main class="main">
+        <form class="form">
+            <div class="inputArea">
+                <input type="text" class="inputText js-get-val" value="" placeholder="ここにTODO内容を書く">
+                <span class="error js-toggle-error">入力が空です</span>
+            </div>
+            <button class="btn js-add-todo">TODOを追加</button>
+        </form>
+
+        <div class="searchBox">
+            <i class="fa fa-search searchBox__icon" aria-hidden="true"></i>
+            <input type="text" class="searchBox__input js-search" value="" placeholder="ここに絞り込みたいキーワードを入力する">
         </div>
-        <ul class="list jsTodoList">
-            <li class="listItem jsTodoList" data-text="ToDoサンプルリスト">
-                <i class="doneIcon fa fa-square-o jsDone"></i>
-                <span class="jsDoneText">TODOリスト</span>
-                <input type="text" class="textEdit jsEdit">
-                <i class="fa fa-trash jsTrash"></i>
+
+        <ul class="list js-todo_list">
+            <li class="list__item js-todo_list-item" data-text="サンプルTODOタスク">
+                <i class="fa fa-square-o icon-check js-click-done" aria-hidden="true"></i>
+                <span class="js-todo_list-text">サンプルTODOク</span>
+                <input type="text" class="editText js-todo_list-editForm" value="サンプルTODOタスク">
+                <i class="fa fa-trash icon-trash js-click-trash" aria-hidden="true"></i>
             </li>
-            <li class="listItem" data-text="ToDoサンプルリスト">
-                <i class="fa fa-square-o jsDone"></i>
-                <span class="jsDoneText">TODOリスト</span>
-                <input type="text" class="textEdit jsEdit">
-                <i class="trashIcon fa fa-trash jsTrash"></i>
+            <li class="list__item list__item--done js-todo_list-item" data-text="サンプルDoneタスク">
+                <i class="fa fa-check-square icon-check js-click-todo" aria-hidden="true"></i>
+                <span class="js-todo_list-text">サンプルDoneタスク</span>
+                <input type="text" class="editText js-todo_list-editForm" value="サンプルDoneタスク">
+                <i class="fa fa-trash icon-trash js-click-trash" aria-hidden="true"></i>
             </li>
         </ul>
-
     </main>
+
     <script src="app.js"></script>
 </body>
 
